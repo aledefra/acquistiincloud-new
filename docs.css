@@ -1,0 +1,507 @@
+body {
+  margin-top: 48px;
+  margin: 0;
+	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #fff;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+/* filtri workarea */
+
+#filterIVA, #sottoconti {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 50%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+/* Barra di navigazione */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #00a0b0;
+  color: white;
+}
+
+.navbar .reg-right {
+  background-color: #333;
+  color: white;
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Tabella */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: center;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+ /* Stato fatture */
+
+ .text-center {
+     text-align: center
+ }
+
+ .fa {
+     display: inline-block;
+     font-family: FontAwesome;
+     font-style: normal;
+     font-weight: normal;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale
+ }
+
+.fa-check:before {
+     content: "\f00c"
+}
+
+
+ i.fa-check, i.fa-times {
+     font-size: 1.4em
+ }
+
+ .green {
+     color: #69aa46 !important
+ }
+
+ .orange {
+     color: #ff892a !important
+ }
+
+ .red {
+     color: #dd5a43 !important
+ }
+
+ /* Matita modifica */
+
+ .fa-pencil {
+     content: "\f040"
+ }
+
+ /* Pulsanti */
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 100% !important;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn:hover {
+    background-color: #80cde5;
+    border-color: #6ac6e2;
+}
+
+.btnpopup {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 1px 5px;
+    font-size: 1px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 100% !important;
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btnpopup:hover {
+    background-color: #80cde5;
+    border-color: #6ac6e2;
+}
+
+  /* pdf reader */
+
+  .pdfstyle {
+
+    width:100%;
+    height:100%;
+}
+
+  /* Filtri */
+
+.widget-box {
+    padding: 0;
+    height:35vh;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 3px 0;
+    border-right: 1px solid #CCC;
+  }
+
+.widget-position {
+      text-align: center;
+      background-color:#cccccc;
+}
+
+  /* Download fic page */
+
+.topmarg {
+  margin-top: 55px;
+}
+
+.form-div {
+  margin-top: 100px;
+}
+
+#file {
+  display: none;
+}
+
+.input_label {
+  background: #009688;
+  color: #fff;
+  padding:30px;
+  transition: 0.3s;
+}
+
+.input_label:hover {
+  background: #26a69a;
+  cursor: pointer;
+}
+  /* workarea */
+
+.datifatt {
+  margin-top: 70px;
+  margin-left: 53%;
+  position: relative;
+}
+
+.div-fatt {
+  margin-top: 52px;
+  height:100%;
+  width: 100%;
+  position: fixed;
+}
+
+.div-pdffatt {
+  height: 94%;
+  left:0px;
+  padding:0px;
+  position: absolute;
+  width: 50%;
+}
+
+.div-datifatt {
+  height: 94%;
+  left:53%;
+  padding:0px;
+  margin-top: 10px;
+  position: absolute;
+  width: 44%;
+}
+
+.div-filterfull {
+  height:10%;
+  width: 100%;
+  display:block;
+  position:static;
+  text-align: left;
+}
+
+.div-filter1 {
+  height: 10%;
+  left:5%;
+  padding:0px;
+  position: absolute;
+  width:20%;
+  font-size: 14px;
+}
+
+.div-filter2 {
+  height: 10%;
+  left:30%;
+  padding:0px;
+  position: absolute;
+  width:20%;
+  font-size: 14px;
+}
+
+.div-filter3 {
+  height: 10%;
+  left:60%;
+  padding:0px;
+  position: absolute;
+  width:35%;
+  font-size: 14px;
+}
+
+.div-inline {
+  display: inline;
+}
+#savefatt {
+  display: inline;
+}
+#subapprfatt {
+  text-align:right;
+}
+
+/* Checkbox personalizzate */
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #d9d9d9;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* input personalizzato */
+
+.submitbtn {
+    width: 10%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 12%;
+    margin-bottom: 16px;
+    margin-left: 88%;
+    resize: vertical;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.resetbtn {
+    width: 10%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 1%;
+    margin-bottom: 16px;
+    margin-left: 88%;
+    resize: vertical;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submitbtn:hover {
+    background-color: #45a049;
+}
+
+.resetbtn:hover {
+    background-color: #45a049;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
